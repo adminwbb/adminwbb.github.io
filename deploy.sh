@@ -23,7 +23,7 @@ set -e
 
 starttime=`date +'%Y-%m-%d %H:%M:%S'`
 
-code_address="git@github.com:adminwbb/adminwbb.github.io.git" # Hugo 项目地址# 
+code_address="https://github.com/adminwbb/adminwbb.github.io.git" # Hugo 项目地址# 
 # code_address_gitee="git@gitee.com:your_username/your_repo" # Hugo 项目地址 Gitee
 
 commit_message="docs: ☣ Update Blog."
