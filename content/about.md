@@ -1,8 +1,11 @@
 ---
-title: About ME
+title: about me
 language: Chinese
 date: 2020-03-04
 ---
 
-YOUR DESCRIPTION.
+我是一个酶制剂检测员,喜欢异想天开,我有个比我牛逼的组长.
 
+我期待有一天替代她,成为公司的主力.到时候老板都要臣服
+
+我的脚下.
