@@ -1,13 +1,13 @@
-baseURL = "https://example.com/"
+baseURL = "https://adminwbb.github.io/"
 languageCode = "zh-cn"
-title = "your title"
+title = "WBB"
 
 theme = "future"
 themesdir = "themes"
 
 paginate = 5
 
-DisqusShortname = "your username"
+DisqusShortname = "wbb"
 
 # Set unsafe mode to allow markdownify to work with goldmark
 # This is important. Please do not delete. It is used to re-render markdown
@@ -145,7 +145,7 @@ weight = 5
 # Coding Communities
 bitbucket = "" 
 codepen = "" 
-github = "your username" 
+github = "adminwbb" 
 gitlab = "" 
 jsfiddle = "" 
 stackoverflow = "" # User Number
