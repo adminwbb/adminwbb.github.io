@@ -9,8 +9,6 @@
 # TODO: Hugo 已经安装，在当前环境变量下可以使用
 # TODO: code_address仓库,确保配置成自己的
 # TODO: 确认这个仓库在Github上已经创建了
-# TODO: 请确保你已经在Github或者Gitee上已经配置好了SSH公钥, 推送时无需密码验证
-# TIP: 为了方便拉取, 还可以设置Gitee上的仓库, 通过code_address_gitee来设置它, 当然这是可选的
 ######################################################################################
 # 如果你是Linux, Mac OS平台，直接运行
 # 如果你是 Windows 平台, 请使用make
@@ -21,13 +19,9 @@
 
 set -e
 
-
-
 starttime=`date +'%Y-%m-%d %H:%M:%S'`
 
 code_address="https://github.com/adminwbb/adminwbb.github.io.git" # Hugo 项目地址# 
-code_address_gitee="" # Hugo 项目地址 Gitee
-
 commit_message="docs: ☣ Update Blog."
 
 dir=$(pwd)
@@ -71,12 +65,8 @@ function syncSourceCode(){
 
     if [ -n  $code_address_gitee ];
     then
-        echo -e "\033[32m[Synchronizing]\033[0m 🚀 Source code to Gitee..."
-        git push -q --progress --atomic $code_address_gitee master &
-        local pid=$!
         echo -e "\033[32m[Synchronizing]\033[0m 🚀 Source code to Github..."
         git push -q --progress --atomic $code_address master
-        wait $pid
     else
         git push --progress --atomic $code_address master
     fi
