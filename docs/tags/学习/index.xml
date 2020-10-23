@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on WBB</title>
-    <link>https://adminwbb.github.io/post/</link>
-    <description>Recent content in Posts on WBB</description>
+    <title>学习 on WBB</title>
+    <link>https://adminwbb.github.io/tags/%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 学习 on WBB</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 23 Oct 2020 21:51:26 +0800</lastBuildDate>
     
-	<atom:link href="https://adminwbb.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://adminwbb.github.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,19 +18,6 @@
       
       <guid>https://adminwbb.github.io/post/%E4%BD%A0%E5%A5%BD/</guid>
       <description>awdawdaw123123123</description>
-    </item>
-    
-    <item>
-      <title>俺的第一篇博客</title>
-      <link>https://adminwbb.github.io/post/start/</link>
-      <pubDate>Sat, 03 Oct 2020 13:11:08 +0800</pubDate>
-      
-      <guid>https://adminwbb.github.io/post/start/</guid>
-      <description>1
-1
-1
-System.out.println(&amp;#34;Hello&amp;#34;); awdawd
-3</description>
     </item>
     
   </channel>
