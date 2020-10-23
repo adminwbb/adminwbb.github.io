@@ -29,5 +29,3 @@ System.out.println("Hello");
 ```
 
 `awdawd`
-
-3
