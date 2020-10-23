@@ -12,34 +12,12 @@
     
     
     <item>
-      <title>明天</title>
-      <link>https://adminwbb.github.io/post/%E6%98%8E%E5%A4%A9/</link>
-      <pubDate>Fri, 23 Oct 2020 22:01:25 +0800</pubDate>
+      <title>第一个博客</title>
+      <link>https://adminwbb.github.io/post/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 23 Oct 2020 22:23:21 +0800</pubDate>
       
-      <guid>https://adminwbb.github.io/post/%E6%98%8E%E5%A4%A9/</guid>
-      <description>#www ##wwww
-ddaw </description>
-    </item>
-    
-    <item>
-      <title>你好</title>
-      <link>https://adminwbb.github.io/post/%E4%BD%A0%E5%A5%BD/</link>
-      <pubDate>Fri, 23 Oct 2020 21:51:26 +0800</pubDate>
-      
-      <guid>https://adminwbb.github.io/post/%E4%BD%A0%E5%A5%BD/</guid>
-      <description>awdawdaw123123123</description>
-    </item>
-    
-    <item>
-      <title>俺的第一篇博客</title>
-      <link>https://adminwbb.github.io/post/start/</link>
-      <pubDate>Sat, 03 Oct 2020 13:11:08 +0800</pubDate>
-      
-      <guid>https://adminwbb.github.io/post/start/</guid>
-      <description>1
-1
-1
-System.out.println(&amp;#34;Hello&amp;#34;); awdawd</description>
+      <guid>https://adminwbb.github.io/post/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>第一个博客  感谢@sdttttt，让我学会了如何搭建博客，果然名师出高徒。</description>
     </item>
     
     <item>
@@ -48,7 +26,7 @@ System.out.println(&amp;#34;Hello&amp;#34;); awdawd</description>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adminwbb.github.io/about/</guid>
-      <description>#我是那样一朵忧郁的男子</description>
+      <description>我是那样一朵忧郁的男子 </description>
     </item>
     
   </channel>
