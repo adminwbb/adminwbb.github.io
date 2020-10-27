@@ -17,8 +17,6 @@
 # 请配置仓库GitHub Page的Source为Master分支下的docs文件夹
 ######################################################################################
 
-set -e
-
 starttime=`date +'%Y-%m-%d %H:%M:%S'`
 
 code_address="https://github.com/adminwbb/adminwbb.github.io.git" # Hugo 项目地址# 
@@ -64,6 +62,8 @@ function syncSourceCode(){
 
     git add --ignore-errors .
     git commit -q -m "${commit_message}"
+
+    set -e
 
     push_starttime=`date +'%Y-%m-%d %H:%M:%S'`
 
