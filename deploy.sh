@@ -22,7 +22,7 @@
 starttime=`date +'%Y-%m-%d %H:%M:%S'`
 
 code_address="git@github.com:adminwbb/adminwbb.github.io"     # Hugo 项目地址
-code_address_gitee="git@gitee.com:sdttttt/sdttttt.gitee.io" # Hugo 项目地址 Gitee
+code_address_gitee="" # Hugo 项目地址 Gitee
 
 IMGTIME=`date --rfc-3339="ns"`
 
@@ -164,10 +164,10 @@ function deploy {
     fi
 }
 
-# if [[ -z $(git diff --stat) ]]; then
-#     errorLog "Error" "💔 文件没有变动欸..."
-#     exit
-# fi
+if [[ -z $(git diff --stat) && -z $(git status -z) ]]; then
+    errorLog "Error" "💔 文件没有变动欸..."
+    exit
+fi
 
 envClean
 generateSite
