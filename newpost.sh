@@ -5,4 +5,4 @@ set -e
 
 read -p "Input post name: " name
 
-hugo new blog/$name.md
+hugo new post/$name.md
