@@ -1,189 +1,97 @@
 baseURL = "https://adminwbb.github.io/"
 languageCode = "zh-cn"
 title = "WBB"
-
-theme = "future"
-themesdir = "themes"
-
+theme = "stack"
 paginate = 5
+disqusShortname = "adminwbb"            # Change it to your Disqus shortname before using
+DefaultContentLanguage = "en"                   # Theme i18n support
 
-DisqusShortname = "wbb"
-
-# Set unsafe mode to allow markdownify to work with goldmark
-# This is important. Please do not delete. It is used to re-render markdown
-[markup]
-[markup.goldmark]
-[markup.goldmark.renderer]
-unsafe = true
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"
 
 [params]
-# Sets the meta tag description
-description = ""
-# Sets the navbarTitle that appears in the top left of the navigation bar
-navbarTitle = "Home"
-# Sets where "View More Posts" links
-viewMorePostLink = "/blog/"
+    mainSections = ["post"]
+    featuredImageField = "image"
+    rssFullContent = true
+    
+    [params.dateFormat]
+        published = "Jan 02, 2006"
+        lastUpdated = "Jan 02, 2006 15:04 MST"
+        
+    [params.sidebar]
+        emoji = "🍥"
+        avatar = "laopo.png"
+        subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        
+    [params.article]
+        math = false
+        [params.article.license]
+            enabled = true 
+            default = "Licensed under CC BY-NC-SA 4.0"
+            
+    [params.comments]
+        enabled = true
+        provider = "utterances"         # Available: disqus, utterances    
+        [params.comments.utterances]
+            repo = "adminwbb/adminwbb.github.io"
+            issueTerm = "[comment]"
+            label = "GitComments"         # Optional
+            theme = "preferred-color-scheme"
+            
+    [params.widgets]
+        enabled = ['archives', 'tag-cloud']
+        [params.widgets.archives]
+            limit = 5
+            ### Archives page relative URL
+            path = "archives"       
+        [params.widgets.tagCloud]
+            limit = 10
+            
+    [params.opengraph]
+        [params.opengraph.twitter]
+            site = ""
+            card = "summary_large_image"
+            
+    [params.defaultImage]
+        [params.defaultImage.opengraph]
+            enabled = false
+            local = false
+            src = ""
+            
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = -100
+        pre = "home"
+    [[menu.main]]
+        identifier = "about-cn"
+        name = "About"
+        url = "about"
+        weight = -90
+        pre = "user"
+    [[menu.main]]
+        identifier = "archives"
+        name = "Archives"
+        url = "archives"
+        weight = -70
+        pre = "archives"
 
-# Sets navbarTitle to match the section of the website
-dynamicTitles = true
-# Sets RSS icons to appear on the sidebar with the social media buttons
-rssAppearAtBottom = true
-rssAppearAtTop = true
-# Sets Social Media icons to appear on the sidebar
-socialAppearAtBottom = true
-socialAppearAtTop = true
-# Sets Categories to sort by number of posts instead of alphabetical
-categoriesByCount = true
-# set to show or to hide categories in the sidebar
-showSidebarCategories = true
-# Sets Estimated Reading Time to appear in post headers
-includeReadingTime = true
-# Sets the Favicon and Version for the site. Default support is for
-# apple-touch-icon-precomposed.png, favicon.png, favicon.ico, and mstile.png.
-# These are stored in the favicon folder. See the following for more information:
-# https://github.com/audreyr/favicon-cheat-sheet
-faviconVersion = ""
-loadFavicon = false
-# Sets Social Share links to appear on posts
-socialShare = true
-# Sets specific share to appear on posts (default behavior is to appear)
-socialShareEmail = true
-socialShareFacebook = true
-socialShareGoogleplus = false
-socialShareLinkedin = false
-socialSharePinterest = false
-socialShareReddit = false
-socialShareStumbleupon = false
-socialShareTwitter = true
+[related]
+    includeNewer = true
+    threshold = 60
+    toLower = false
 
-# Load custom CSS or JavaScript files. The variable is an array so that you
-# can load multiple files if necessary. You can also load the standard theme
-# files by adding the value, "default".
-# customCSS            = ["default", "/path/to/file"]
-# customJS             = ["default", "/path/to/file"]
-customCSS = ["default"]
-customJS = ["default"]
+    [[related.indices]]
+        name = "tags"
+        weight = 100
 
-# options for highlight.js (version, additional languages, and theme)
-MathJaxCDN = "//cdn.bootcss.com" 
-MathJaxVersion = "2.7.1" 
-disable_highlight = false # set to true to disable Highlight
-highlightjsCDN = "//cdn.bootcss.com" 
-highlightjsLang = ["r", "yaml", "css"] 
-highlightjsTheme = "github" 
-highlightjsVersion = "9.11.0" 
+    [[related.indices]]
+        name = "categories"
+        weight = 200
 
-# Disqus will take priority over Staticman (github.com/eduardoboucas/staticman)
-# due to its ease of use. Feel free to check out both and decide what you would
-# prefer to use. See Staticman.yml for additional settings.
-[params.staticman]
-# Sets Statiman to be active
-staticman = false
-# Sets the location for Staticman to connect to
-branch = ""
-repo = ""
-username = ""
-
-[params.staticman.recaptcha]
-secret = "ENCRYPTED_SECRET"
-sitekey = "SITE_KEY"
-
-# These are optional params related to the sidebar. They are recommended, but not
-# required for proper functionality. HTML is supported within the params.
-[params.intro]
-header = "your content"
-
-paragraph = ""
-
-about = ""
-
-# This appears at the top of the sidebar above params.intro.header.
-# A width of less than 100px is recommended from a design perspective.
-[params.intro.pic]
-src = "/title.jpg"
-# Sets Image to be a cirlce
-circle = false
-# Sets Image to be Future Imperfect's hexagon
-alt = "Hugo Future Imperfect"
-imperfect = true
-width = ""
-
-[params.postAmount]
-# Sets the number of recent posts to show in the sidebar. The default value is 5.
-sidebar = 5
-
-# Sets the menu items in the navigation bar
-# Identifier prepends a Font Awesome icon to the menu item
-[[menu.main]]
-identifier = "fa fa-home"
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-identifier = "fa fa-id-card-o"
-name = "About"
-url = "/about"
-weight = 2
-
-[[meun.main]]
-identifier = "fa fa-id-card-o"
-name = "Posts"
-url = "/post"
-weight = 2
-
-[[menu.main]]
-identifier = "fa fa-sitemap"
-name = "Tags"
-url = "/tags"
-weight = 5
-
-# Sets Social Media icons to appear and link to your account. Value should be your
-# username unless otherwise noted. These are the icons affected by socialAppearAtTop
-# and socialAppearAtBottom.
-[social]
-# Coding Communities
-bitbucket = "" 
-codepen = "" 
-github = "adminwbb" 
-gitlab = "" 
-jsfiddle = "" 
-stackoverflow = "" # User Number
-# Visual Art Communities
-behance = ""
-deviantart = ""
-dribbble = ""
-flickr = ""
-# Publishing Communities
-medium = ""
-wordpress = ""
-# Professional/Business Oriented Communities
-foursquare = ""
-linkedin = ""
-linkedin_company = ""
-slideshare = ""
-xing = ""
-# Social Networks
-facebook = "" 
-googleplus = "" 
-quora = "" 
-reddit = "" 
-vimeo = "" 
-whatsapp = "" # WhatsApp Number
-youtube = "" 
-# WeChat and QQ need testing.
-googlescholar = "" 
-instagram = "" 
-orcid = "" 
-pinterest = "" 
-qq = "" # User ID Number
-researchgate = "" 
-skype = "" 
-snapchat = "" 
-telegram = "" 
-tumblr = "" 
-twitter = "" 
-vine = "" 
-wechat = "" 
-# Emailc
-email = ""
+[markup]
+    [markup.highlight]
+        noClasses = false
