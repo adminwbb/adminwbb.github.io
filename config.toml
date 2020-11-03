@@ -22,13 +22,13 @@ DefaultContentLanguage = "en"                   # Theme i18n support
     [params.sidebar]
         emoji = "🍥"
         avatar = "laopo.png"
-        subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        
+        subtitle = "我是个忧郁的男子。"
+
     [params.article]
         math = false
         [params.article.license]
             enabled = true 
-            default = "Licensed under CC BY-NC-SA 4.0"
+            default = "Licensed under MIT."
             
     [params.comments]
         enabled = true
@@ -58,7 +58,7 @@ DefaultContentLanguage = "en"                   # Theme i18n support
             enabled = false
             local = false
             src = ""
-            
+
 [menu]
     [[menu.main]]
         identifier = "home"
