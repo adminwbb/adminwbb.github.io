@@ -26,7 +26,7 @@ code_address_gitee="" # Hugo 项目地址 Gitee
 
 IMGTIME=`date --rfc-3339="ns"`
 
-commit_message="$IMGTIME"
+commit_message="☕ $IMGTIME"
 
 dir=$(pwd)
 
@@ -83,6 +83,7 @@ function syncSourceCode {
 
     git add --ignore-errors .
 
+    successLog "Commit" "$commit_message"
     git commit -q -m "$commit_message"
 
     checkSSH
