@@ -174,4 +174,4 @@ envClean
 generateSite
 deploy
 
-cd $dir
+cd $dir 
