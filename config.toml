@@ -35,7 +35,7 @@ DefaultContentLanguage = "en"                   # Theme i18n support
         provider = "utterances"         # Available: disqus, utterances    
         [params.comments.utterances]
             repo = "adminwbb/adminwbb.github.io"
-            issueTerm = ""
+            issueTerm = "pathname"
             label = "GitComments"         # Optional
             theme = "preferred-color-scheme"
             

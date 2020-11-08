@@ -19,16 +19,20 @@
 # 请配置仓库GitHub Page的Source为Master分支下的docs文件夹
 ######################################################################################
 
-starttime=`date +'%Y-%m-%d %H:%M:%S'`
+START_TIME=`date +%s`
 
 code_address="git@github.com:adminwbb/adminwbb.github.io"     # Hugo 项目地址
 code_address_gitee="" # Hugo 项目地址 Gitee
 
-IMGTIME=`date --rfc-3339="ns"`
+IMGTIME=`date --rfc-email`
 
-commit_message="☕ $IMGTIME"
+dir=`pwd`
 
-dir=$(pwd)
+emoji=("☕" "🚀" "🔧" "🗃" "🛠" "🌈" "💦" "🪔" "🚚" "📚")
+
+emo_index=$((RANDOM % 10))
+
+commit_message="$IMGTIME ${emoji[emo_index]}"
 
 function envClean() {
     if [ -d "./public" ]; then
@@ -79,7 +83,6 @@ function checkSSH() {
 }
 
 function syncSourceCode {
-    set -e
 
     git add --ignore-errors .
 
@@ -93,8 +96,6 @@ function syncSourceCode {
     git pull $code_address master
 
     successLog "Deploying" "🚀 Push Running... "
-
-    push_starttime=$(date +'%Y-%m-%d %H:%M:%S')
 
     if [ ${#code_address_gitee} -eq 0 ]; then
 
@@ -115,17 +116,12 @@ function syncSourceCode {
         wait $pid
     fi
 
-    local push_endtime=$(date +'%Y-%m-%d %H:%M:%S')
-    local start_seconds=$(date --date="$push_starttime" +%s)
-    local end_seconds=$(date --date="$push_endtime" +%s)
-
-    stateLog "Time" "⏱ Total in "$((end_seconds - start_seconds))" s"
 }
 
 function generateSite {
 
-    successLog "HugoGenerator" "🚚 Hugo Building..."
-    hugo --enableGitInfo --minify -v
+    successLog "Hugo" "🚚 Building..."
+    hugo --enableGitInfo --print-mem --minify  -v
 
     if [ -d "./public" ]; then
         mv ./public ./docs
@@ -149,17 +145,10 @@ function checkEnv {
 }
 
 function deploy {
-
     checkEnv
     if [ $? -eq 0 ]; then
         syncSourceCode
         cleanWork
-
-        local endtime=$(date +'%Y-%m-%d %H:%M:%S')
-        local start_seconds=$(date --date="$starttime" +%s)
-        local end_seconds=$(date --date="$endtime" +%s)
-
-        successLog "Successful" "🎉 We did it! ⏱ Total Time: "$((end_seconds - start_seconds))"s"
     else
         cleanWork
     fi
@@ -174,4 +163,9 @@ envClean
 generateSite
 deploy
 
-cd $dir 
+cd $dir
+
+END_TIME=`date +%s`
+EXECUTING_TIME=`expr $END_TIME - $START_TIME`
+
+successLog "Successful" "🎉 We did it! ⏱ Total Time: $EXECUTING_TIME s"
