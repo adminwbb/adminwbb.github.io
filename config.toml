@@ -21,7 +21,7 @@ DefaultContentLanguage = "en"                   # Theme i18n support
         
     [params.sidebar]
         emoji = "🍥"
-        avatar = "titleh.png"
+        avatar = "laopo.jpg"
         subtitle = "羡慕苦行者，但是又贪恋世俗，嫉妒别人过多比自己好，但是也只能无能狂怒，想要找人说话，但是又没人搭理，这就是真实的我。"
 
     [params.article]
