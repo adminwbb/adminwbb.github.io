@@ -29,15 +29,17 @@ hugo new post/文件名.md
 ## GitHub Actions 工作流
 
 ### deploy.yml
+
 - 触发条件：master 分支 push
 - 构建命令：`hugo --enableGitInfo --minify`
 - 部署到 GitHub Pages
 
 ### format-markdown.yml
+
 - 触发条件：任何分支的 `.md` 文件变更
 - 自动：
-  1. 重命名文件为标题
-  2. 用 Prettier 格式化 Markdown
+    1. 重命名文件为标题
+    2. 用 Prettier 格式化 Markdown
 - 跳过条件：`github.actor != 'github-actions[bot]'`（防止无限循环）
 
 ## 部署说明
