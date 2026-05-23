@@ -119,7 +119,7 @@ _Note:_ Substitute all `CAPS` with the applicable information pertaining to you.
 
 #### GitHub Desktop
 
-1. **Create A Local Copy**
+1.  **Create A Local Copy**
     1. **File** -> **Clone Repository...**
     2. Select your fork, `YOUR_USERNAME\hugo-future-imperfect`
     3. Choose your local path
@@ -127,14 +127,15 @@ _Note:_ Substitute all `CAPS` with the applicable information pertaining to you.
 
     You have now cloned your fork to the location specified.
 
-2. **Syncing Fork with Original** and **Keeping it Synced**
+2.  **Syncing Fork with Original** and **Keeping it Synced**
 
-    This is currently not possible via GitHub Desktop, but is on the feature list
-    for [v1.1][GitHub Desktop 1.1]. Keep an eye out for that release.
+        This is currently not possible via GitHub Desktop, but is on the feature list
+        for [v1.1][GitHub Desktop 1.1]. Keep an eye out for that release.
 
-    In the meantime, the _best_ way to stay in sync is to create a pull request
-    where the `base fork` is `YOUR_USERNAME/hugo-future-imperfect` and the `head
-fork` is `jpescador/hugo-future-imperfect`.
+        In the meantime, the _best_ way to stay in sync is to create a pull request
+        where the `base fork` is `YOUR_USERNAME/hugo-future-imperfect` and the `head
+
+    fork`is`jpescador/hugo-future-imperfect`.
 
 ## Creating an Issue Ticket
 
