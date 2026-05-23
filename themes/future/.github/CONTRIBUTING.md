@@ -11,16 +11,15 @@ well as being an opportunity for people to learn how to use Git and GitHub.
 
 ## Table of Contents
 
-
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Table of Contents](#table-of-contents)
 - [Getting Set Up](#getting-set-up)
-	- [Requirements](#requirements)
-	- [Forking](#forking)
-	- [Syncing](#syncing)
-		- [Git Bash, Command Prompt, PowerShell](#git-bash-command-prompt-powershell)
-		- [GitHub Desktop](#github-desktop)
+    - [Requirements](#requirements)
+    - [Forking](#forking)
+    - [Syncing](#syncing)
+        - [Git Bash, Command Prompt, PowerShell](#git-bash-command-prompt-powershell)
+        - [GitHub Desktop](#github-desktop)
 - [Creating an Issue Ticket](#creating-an-issue-ticket)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Style Guide](#style-guide)
@@ -46,98 +45,96 @@ theme.
 ### Syncing
 
 Since changes to one aspect of a Hugo theme tend to require changes in multiple
-locations, this step is vital. Please *always* make sure you stay in sync with
+locations, this step is vital. Please _always_ make sure you stay in sync with
 the original, or create an issue or pull request so we know what files are being
 worked on and we can manage it that way.
 
 #### Git Bash, Command Prompt, PowerShell
 
-*Note:* Substitute all `CAPS` with the applicable information pertaining to you.
+_Note:_ Substitute all `CAPS` with the applicable information pertaining to you.
 
 1. **Set Up Git**
 
-   If you haven't yet, you should first [set up Git][GitHub Git]. You will also
-   need to [set up authentication to GitHub from Git][GitHub Authentication] as
-   well.
+    If you haven't yet, you should first [set up Git][GitHub Git]. You will also
+    need to [set up authentication to GitHub from Git][GitHub Authentication] as
+    well.
 
 2. **Create A Local Copy**
 
-   ```
-   cd PATH/TO/YOUR/LOCATION
-   git clone https://github.com/YOUR-USERNAME/hugo-future-imperfect
-   ```
+    ```
+    cd PATH/TO/YOUR/LOCATION
+    git clone https://github.com/YOUR-USERNAME/hugo-future-imperfect
+    ```
 
-   You have now cloned your fork to the location specified.
+    You have now cloned your fork to the location specified.
 
 3. **Connecting Fork with Original**
 
-   ```
-   git remote add upstream https://github.com/jpescador/hugo-future-imperfect.git
-   ````
+    ```
+    git remote add upstream https://github.com/jpescador/hugo-future-imperfect.git
+    ```
 
-   You have now connected your fork with `jpescador/hugo-future-imperfect`,
-   the `upstream`.
+    You have now connected your fork with `jpescador/hugo-future-imperfect`,
+    the `upstream`.
 
-   To confirm this:
+    To confirm this:
 
-   ```
-   git remote -v
-   ````
+    ```
+    git remote -v
+    ```
 
-   Which should return:
+    Which should return:
 
-   ```
-   origin    https://github.com/YOUR_USERNAME/hugo-future-imperfect.git (fetch)
-   origin    https://github.com/YOUR_USERNAME/hugo-future-imperfect.git (push)
-   upstream  https://github.com/jpescador/hugo-future-imperfect.git (fetch)
-   upstream  https://github.com/jpescador/hugo-future-imperfect.git (push)
-   ```
+    ```
+    origin    https://github.com/YOUR_USERNAME/hugo-future-imperfect.git (fetch)
+    origin    https://github.com/YOUR_USERNAME/hugo-future-imperfect.git (push)
+    upstream  https://github.com/jpescador/hugo-future-imperfect.git (fetch)
+    upstream  https://github.com/jpescador/hugo-future-imperfect.git (push)
+    ```
 
 4. **Keeping it synced**
 
-   ```
-   git fetch upstream
-   git checkout master
-   ```
+    ```
+    git fetch upstream
+    git checkout master
+    ```
 
-   You have now fetched the files from the upstream and have confirmed that you
-   are on the master branch.
+    You have now fetched the files from the upstream and have confirmed that you
+    are on the master branch.
+    1. If you need to _merge_ any changes you've made with the updated original,
+       use the following:
 
-   1. If you need to *merge* any changes you've made with the updated original,
-   use the following:
+        ```
+        git merge upstream/master
+        git push origin master
+        ```
 
-      ```
-      git merge upstream/master
-      git push origin master
-      ```
+    2. If you need to _reset_ any changes you've made back to the original for
+       whatever reason, use the following:
 
-   2. If you need to *reset* any changes you've made back to the original for
-   whatever reason, use the following:
-
-      ```
-      git reset --hard upstream/master
-      git push origin master --force
-      ```
+        ```
+        git reset --hard upstream/master
+        git push origin master --force
+        ```
 
 #### GitHub Desktop
 
 1. **Create A Local Copy**
+    1. **File** -> **Clone Repository...**
+    2. Select your fork, `YOUR_USERNAME\hugo-future-imperfect`
+    3. Choose your local path
+    4. Press **Clone**
 
-   1. **File** -> **Clone Repository...**
-   2. Select your fork, `YOUR_USERNAME\hugo-future-imperfect`
-   3. Choose your local path
-   4. Press **Clone**
-
-   You have now cloned your fork to the location specified.
+    You have now cloned your fork to the location specified.
 
 2. **Syncing Fork with Original** and **Keeping it Synced**
 
-   This is currently not possible via GitHub Desktop, but is on the feature list
-   for [v1.1][GitHub Desktop 1.1]. Keep an eye out for that release.
+    This is currently not possible via GitHub Desktop, but is on the feature list
+    for [v1.1][GitHub Desktop 1.1]. Keep an eye out for that release.
 
-   In the meantime, the *best* way to stay in sync is to create a pull request
-   where the `base fork` is `YOUR_USERNAME/hugo-future-imperfect` and the `head
-   fork` is `jpescador/hugo-future-imperfect`.
+    In the meantime, the _best_ way to stay in sync is to create a pull request
+    where the `base fork` is `YOUR_USERNAME/hugo-future-imperfect` and the `head
+fork` is `jpescador/hugo-future-imperfect`.
 
 ## Creating an Issue Ticket
 
@@ -147,20 +144,19 @@ couple of things to note from that template are:
 
 1. **Check all the prerequisites**
 
-   Make sure you have done all the steps at the top before submitting the issue
-   ticket. Redundancy can easily clutter the repository meaning less time
-   working on the theme and more time having to do clean-up. They are as follows:
-
-   - [ ] I am running the [latest version of Hugo][Hugo Release]
-   - [ ] I am using the [latest version of Hugo-Future-Imperfect][Theme Sync]
-   - [ ] I checked the [documentation] and found no answer
-   - [ ] I checked the [issues][All Issues] to make sure that this issue has not
-   already been filed
+    Make sure you have done all the steps at the top before submitting the issue
+    ticket. Redundancy can easily clutter the repository meaning less time
+    working on the theme and more time having to do clean-up. They are as follows:
+    - [ ] I am running the [latest version of Hugo][Hugo Release]
+    - [ ] I am using the [latest version of Hugo-Future-Imperfect][Theme Sync]
+    - [ ] I checked the [documentation] and found no answer
+    - [ ] I checked the [issues][All Issues] to make sure that this issue has not
+          already been filed
 
 2. **Be very clear with your descriptions.**
 
-   Err on the side of too much information. It helps track the problem down
-   quicker or figure out how to implement it easier.
+    Err on the side of too much information. It helps track the problem down
+    quicker or figure out how to implement it easier.
 
 ## Creating a Pull Request
 
@@ -182,22 +178,21 @@ organization. A couple of things to note from that template are:
 
 1. **Check all the prerequisites**
 
-   Make sure you have done all the steps at the top before submitting the pull
-   request. Redundancy can easily clutter the repository meaning less time
-   working on the theme and more time having to do clean-up. They are as follows:
-
-   - [ ] I am running the [latest version of Hugo][Hugo Release]
-   - [ ] I am using the [latest version of Hugo-Future-Imperfect][Theme Sync]
-   - [ ] I checked the [issues][All Issues]
-  to make sure that this feature has not been rejected before
-   - [ ] I checked the [pull requests][All Pull Requests]
-  to make sure that this feature is not already being developed
+    Make sure you have done all the steps at the top before submitting the pull
+    request. Redundancy can easily clutter the repository meaning less time
+    working on the theme and more time having to do clean-up. They are as follows:
+    - [ ] I am running the [latest version of Hugo][Hugo Release]
+    - [ ] I am using the [latest version of Hugo-Future-Imperfect][Theme Sync]
+    - [ ] I checked the [issues][All Issues]
+          to make sure that this feature has not been rejected before
+    - [ ] I checked the [pull requests][All Pull Requests]
+          to make sure that this feature is not already being developed
 
 2. **Always include any related issues**
 
-   Make sure in the comments that you include any issues this closes by writing
-   `Closes #XXX` under *Motivation and Context*. This will automatically close
-   the issue when the pull request is accepted.
+    Make sure in the comments that you include any issues this closes by writing
+    `Closes #XXX` under _Motivation and Context_. This will automatically close
+    the issue when the pull request is accepted.
 
 ## Style Guide
 
@@ -212,7 +207,6 @@ theme theme becomes more active with people constantly resyncing, we can look at
 doing an across the board change (we might actually look at doing this as part
 of [v0.30][Next Release] since that will be a rather large change requiring
 everyone to resync).
-
 
 ## Thank You
 

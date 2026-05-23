@@ -16,15 +16,15 @@ interested in seeing a live example.
 
 - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
-	- [exampleSite](#examplesite)
-	- [config.toml](#configtoml)
-	- [Hugo's Built-In Server](#hugos-built-in-server)
-    - [Hugo's website SEO](#hugos-website-seo)
+    - [exampleSite](#examplesite)
+    - [config.toml](#configtoml)
+    - [Hugo's Built-In Server](#hugos-built-in-server)
+        - [Hugo's website SEO](#hugos-website-seo)
 - [Shortcodes](#shortcodes)
-	- [fancybox](#fancybox)
-	- [img-post](#img-post)
-	- [img-fit](#img-fit)
-	- [url-link](#url-link)
+    - [fancybox](#fancybox)
+    - [img-post](#img-post)
+    - [img-fit](#img-fit)
+    - [url-link](#url-link)
 - [About the Author](#about-the-author)
 - [License](#license)
 
@@ -123,7 +123,9 @@ It was adapted and integrated thanks to the following guide:
 [https://keithpblog.org/post/hugo-website-seo/](https://keithpblog.org/post/hugo-website-seo/)
 
 If you wish to enable SEO on this theme, follow these instructions:
+
 1. To include the following parameters in your _config.toml_
+
 ```
 # .config.toml
 ...
@@ -142,26 +144,30 @@ canonifyURLs = true
     - Submit the sitemap (/sitemap.xml) for indexing
     - Wait
 
-3. Add your website to Bing 
+3. Add your website to Bing
     - Login to the [Bing Webmaster Console](https://www.bing.com/toolbox/webmaster/)
     - Add your site, details and verify
     - From the 3 option, we recommend adding the xml file to you website
 
 ## Shortcodes
+
 In addition to the native [Hugo shortcodes](https://gohugo.io/extras/shortcodes/),
 the theme also includes the following codes that I hope you find useful:
 fancybox, img-post, img-fit, and url-link.
 
 ### fancybox
+
 [Fancybox](http://fancyapps.com/fancybox/3/) is a jQuery lightbox script for displaying images, videos and more. It is touch
 enabled, responsive and fully customizable. The commands are shown below:
 
 **Named**
+
 ```
 {{< fancybox path="path" file="file" caption="caption" gallery="gallery" >}}
 ```
 
 **Positional**
+
 ```
 {{< fancybox "path" "file" "caption" "gallery" >}}
 ```
@@ -173,15 +179,18 @@ Credit: [pacollins]
 ---
 
 ### img-post
+
 Add an image which can be aligned center, left, or right. The commands are shown
 below:
 
 **Named**
+
 ```
 {{< img-post path="date" file="filename.jpg" alt="Alt Text" type="left" >}}
 ```
 
 **Positional**
+
 ```
 {{< img-post "title" "filename.jpg" "Alt Text" "left" >}}
 ```
@@ -193,10 +202,12 @@ Credit: [jpescador]
 ---
 
 ### img-fit
+
 Insert multiple images with the ability to create a gallery if needed. The command
 is shown below:
 
 **Positional Only**
+
 ```
     {{< img-fit
         "4u" "filename1.jpg" "Alt text 1"
@@ -212,10 +223,12 @@ Credit: [jpescador]
 ---
 
 ### url-link
+
 Create a hyperlink and set a target value for the link. The default value is
 `_blank`. The command is shown below:
 
 **Positional Only**
+
 ```
 {{< url-link "title" "www.link.com" "target">}}
 ```
