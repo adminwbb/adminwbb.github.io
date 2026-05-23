@@ -1,10 +1,23 @@
 baseURL = "https://adminwbb.github.io/"
-languageCode = "zh-cn"
 title = "WBB"
 theme = "stack"
 paginate = 5
-disqusShortname = "adminwbb"            # Change it to your Disqus shortname before using
-DefaultContentLanguage = "en"                   # Theme i18n support
+disqusShortname = "adminwbb"
+DefaultContentLanguage = "en"
+
+[languages.en]
+locale = "en"
+direction = "ltr"
+label = "English"
+title = "WBB"
+weight = 1
+
+[languages.zh-cn]
+locale = "zh-CN"
+direction = "ltr"
+label = "简体中文"
+title = "WBB"
+weight = 2
 
 [permalinks]
     post = "/p/:slug/"
