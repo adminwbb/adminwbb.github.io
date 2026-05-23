@@ -26,6 +26,9 @@ jobs:
       - name: Install Prettier
         run: npm install -g prettier
 
+      - name: Rename files by title
+        run: python3 scripts/rename_by_title.py content/post
+
       - name: Format Markdown
         run: prettier --write "**/*.md"
 
