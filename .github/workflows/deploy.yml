@@ -21,7 +21,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build
-        run: hugo --enableGitInfo --minify
+        run: hugo --enableGitInfo --minify --timeout 60s
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
