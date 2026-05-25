@@ -23,18 +23,18 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Install Prettier
-        run: npm install -g prettier
+      - name: Install Oxfmt
+        run: npm install -D oxfmt@latest
 
       - name: Rename files by title
         run: python3 scripts/rename_by_title.py content/post
 
       - name: Format Markdown
-        run: prettier --write "**/*.md"
+        run: npx oxfmt --write "**/*.md"
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🎨 Format Markdown with Prettier"
+          commit_message: "🎨 Format Markdown with Oxfmt"
           commit_user_name: "GitHub Actions"
           commit_user_email: "actions@github.com"
